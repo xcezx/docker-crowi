@@ -1,0 +1,8 @@
+language: bash
+services: docker
+
+script:
+  - make
+
+after_script:
+  - docker image ls
