@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 script:
-  - docker build ---file Dockerfile --tag xcezx/crowi .
+  - docker build --file Dockerfile --tag xcezx/crowi .
 
 after_script:
   - docker image ls
