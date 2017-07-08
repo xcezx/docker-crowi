@@ -13,7 +13,7 @@ RUN set -ex \
        python \
        tar \
     && curl -LO "$CROWI_DOWNLOAD_URL" \
-    && echo "7aaaa4e95008c04658e13a103c86bea41a90433d *v$CROWI_VERSION.tar.gz" | sha1sum -c - \
+    && echo "$CROWI_DOWNLOAD_SHA *v$CROWI_VERSION.tar.gz" | sha1sum -c - \
     && mkdir /crowi \
     && tar -xzf v$CROWI_VERSION.tar.gz -C /crowi --strip-components 1 \
     && cd /crowi \
